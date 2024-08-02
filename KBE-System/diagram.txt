@@ -1,0 +1,77 @@
++-----------------------------------+
+|            User Input             |
+|-----------------------------------|
+| - Flow Orientation                |
+| - Position                        |
+| - Material Casing                 |
+| - Material Impeller               |
+| - Flow Rate                       |
+| - Pressure                        |
+| - Head                            |
+| - NPSH                            |
+| - Impeller Size                   |
+| - Number of Impellers             |
+| - Design Type                     |
+| - Volute                          |
+| - Motor RPM                       |
+| - Ambient Temp                    |
+| - Internal Temp                   |
+| - Fluid Type                      |
+| - Frequency                       |
++-----------------------------------+
+                 |
+                 v
++-----------------------------------+
+|        Validate User Input        |
+|-----------------------------------|
+| - Check if all required fields    |
+|   are filled                      |
+| - Display error messages if       |
+|   necessary                       |
++-----------------------------------+
+                 |
+                 v
++-----------------------------------+
+|       Compare with Models         |
+|-----------------------------------|
+| - For each model:                 |
+|    - Check if Flow Orientation    |
+|      matches                      |
+|    - Check if Position matches    |
+|    - Check if Material Casing     |
+|      matches                      |
+|    - Check if Material Impeller   |
+|      matches                      |
+|    - Check if Flow Rate is within |
+|      range                        |
+|    - Check if Pressure is within  |
+|      range                        |
+|    - Check if Head is within      |
+|      range                        |
+|    - Check if Number of Impellers |
+|      matches                      |
+|    - Check if Fluid Type matches  |
+|    - Check if Frequency is within |
+|      range                        |
+|    - Score the model based on     |
+|      matches                      |
++-----------------------------------+
+                 |
+                 v
++-----------------------------------+
+|        Select Best Model          |
+|-----------------------------------|
+| - Find the model with the highest |
+|   score                           |
++-----------------------------------+
+                 |
+                 v
++-----------------------------------+
+|            Display Result         |
+|-----------------------------------|
+| - Display selected model          |
+| - Display associated regulations  |
+| - Display model image             |
+| - If no model matches, display    |
+|   'No suitable model found'       |
++-----------------------------------+
