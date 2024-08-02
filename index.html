@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pump Selection System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pump Selection System</h1>
+      <form
+        id="pump-form"
+        class="nice-form-group"
+        onsubmit="handleSubmit(event)"
+      >
+        <label for="flowOrientation"
+          >Orientasi Flow: <span class="required">*</span></label
+        >
+        <select id="flowOrientation" required>
+          <option value="">Pilih Orientasi</option>
+          <option value="Radial">Radial</option>
+          <option value="Axial">Axial</option>
+          <option value="Mixed">Mixed</option>
+        </select>
+
+        <label for="position">Position: <span class="required">*</span></label>
+        <select id="position" required>
+          <option value="">Pilih Posisi</option>
+          <option value="Horizontal">Horizontal</option>
+          <option value="Vertical">Vertical</option>
+          <option value="Vertical atau Horizontal">
+            Vertical atau Horizontal
+          </option>
+        </select>
+
+        <label for="suctionDischarge">Dia. Suction/Discharge (mm):</label>
+        <input
+          type="number"
+          id="suctionDischarge"
+          placeholder="Enter diameter"
+        />
+
+        <label for="materialCasing"
+          >Material Casing: <span class="required">*</span></label
+        >
+        <select id="materialCasing" required>
+          <option value="">Pilih Material Casing</option>
+          <option value="Plastic">Plastic</option>
+          <option value="Metal">Metal</option>
+          <option value="Ceramic">Ceramic</option>
+          <option value="Thermoplastic">Thermoplastic</option>
+          <option value="Gray Cast Iron">Gray Cast Iron</option>
+          <option value="Cast Iron">Cast Iron</option>
+          <option value="Composite">Composite</option>
+          <option value="Gray Iron Casting">Gray Iron Casting</option>
+        </select>
+
+        <label for="materialImpeller"
+          >Material Impeller: <span class="required">*</span></label
+        >
+        <select id="materialImpeller" required>
+          <option value="">Pilih Material Impeller</option>
+          <option value="Plastic">Plastic</option>
+          <option value="Metal">Metal</option>
+          <option value="Ceramic">Ceramic</option>
+          <option value="Cast Iron">Cast Iron</option>
+          <option value="Brass">Brass</option>
+          <option value="Composite">Composite</option>
+          <option value="Bronze">Bronze</option>
+          <option value="Bronze Fitted">Bronze Fitted</option>
+        </select>
+
+        <label for="flowRate"
+          >Flow Rate (m³/h): <span class="required">*</span></label
+        >
+        <input
+          type="number"
+          id="flowRate"
+          placeholder="Enter flow rate"
+          required
+        />
+
+        <label for="pressure"
+          >Pressure (bar): <span class="required">*</span></label
+        >
+        <input
+          type="number"
+          id="pressure"
+          placeholder="Enter pressure"
+          required
+        />
+
+        <label for="head">Head (m): <span class="required">*</span></label>
+        <input type="number" id="head" placeholder="Enter head" required />
+
+        <label for="npsh">NPSH:</label>
+        <input type="number" id="npsh" placeholder="Enter NPSH" />
+
+        <label for="impellerSize">Ukuran Impeller (mm):</label>
+        <input
+          type="number"
+          id="impellerSize"
+          placeholder="Enter impeller size"
+        />
+
+        <label for="numberImpeller"
+          >Jumlah Impeller: <span class="required">*</span></label
+        >
+        <select id="numberImpeller" required>
+          <option value="">Pilih Jumlah Impeller</option>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+        </select>
+
+        <label for="designType">Bentuk Desain:</label>
+        <select id="designType">
+          <option value="">Pilih Bentuk Desain</option>
+          <option value="Open">Open</option>
+          <option value="Closed">Closed</option>
+          <option value="Francis Vane Impeller (Closed)">
+            Francis Vane Impeller (Closed)
+          </option>
+          <option value="Adjustable Propeller Blades or Inducer">
+            Adjustable Propeller Blades or Inducer
+          </option>
+        </select>
+
+        <label for="volute">Volute:</label>
+        <select id="volute">
+          <option value="">Pilih Volute</option>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Spiral Volute">Spiral Volute</option>
+          <option value="Radial">Radial</option>
+          <option value="Cast Tube Bend, Welded Tube Bend">
+            Cast Tube Bend, Welded Tube Bend
+          </option>
+          <option value="Cast Pipe Elbow">Cast Pipe Elbow</option>
+        </select>
+
+        <label for="motorRPM">Motor RPM:</label>
+        <input type="number" id="motorRPM" placeholder="Enter motor RPM" />
+
+        <label for="ambientTemp">Ambient Temp (°C):</label>
+        <input
+          type="number"
+          id="ambientTemp"
+          placeholder="Enter ambient temperature"
+        />
+
+        <label for="internalTemp">Internal Temp (°C):</label>
+        <input
+          type="number"
+          id="internalTemp"
+          placeholder="Enter internal temperature"
+        />
+
+        <label for="fluidType"
+          >Jenis Fluida: <span class="required">*</span></label
+        >
+        <select id="fluidType" required>
+          <option value="">Pilih Jenis Fluida</option>
+          <option value="Single Phase">Single Phase</option>
+          <option value="Two Phase">Two Phase</option>
+          <option value="Water">Water</option>
+          <option value="Cairan Kimia Non Korosif">
+            Cairan Kimia Non Korosif
+          </option>
+        </select>
+
+        <label for="frequency"
+          >Frekuensi (Hz): <span class="required">*</span></label
+        >
+        <input
+          type="number"
+          id="frequency"
+          placeholder="Enter frequency"
+          required
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="errorMessages" style="color: red; margin-top: 10px"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
